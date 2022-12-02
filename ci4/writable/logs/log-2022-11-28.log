@@ -1,0 +1,258 @@
+ERROR - 2022-11-28 03:35:31 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tb...', 0)
+#1 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tb...')
+#2 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tb...')
+#3 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tb...', Array, false)
+#4 D:\Xampp\htdocs\restoran-ci4\ci4\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\Xampp\htdocs\restoran-ci4\ci4\system\BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\Xampp\htdocs\restoran-ci4\ci4\app\Controllers\Admin\Pelanggan.php(28): CodeIgniter\BaseModel->delete(Array)
+#7 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(927): App\Controllers\Admin\Pelanggan->delete('1')
+#8 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pelanggan))
+#9 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\restoran-ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-28 03:35:31 --> Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `tblpelanggan`
+WHERE `id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `tblpelanggan`
+WHERE `id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `tblpelanggan`
+WHERE `id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `tblpelanggan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\Admin\Pelanggan.php(28): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Pelanggan->delete('1')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Pelanggan))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 04:15:06 --> unlink(D:\Xampp\htdocs\restoran-ci4\ci4\writable\debugbar/debugbar_1669628867.839812.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\Xampp\\htdocs\\restoran-ci4\\ci4\\writable\\debugbar/debugbar_1669628867.839812.json): No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ci4\\writable\\debugbar/debugbar_1669628867.839812.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1669630500.876731', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 04:15:06 --> unlink(D:\Xampp\htdocs\restoran-ci4\ci4\writable\debugbar/debugbar_1669628843.423040.json): No such file or directory
+in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 76.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(D:\\Xampp\\htdocs\\restoran-ci4\\ci4\\writable\\debugbar/debugbar_1669628843.423040.json): No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar\\Collectors\\History.php', 76)
+ 2 SYSTEMPATH\Debug\Toolbar\Collectors\History.php(76): unlink('FCPATH\\ci4\\writable\\debugbar/debugbar_1669628843.423040.json')
+ 3 SYSTEMPATH\Debug\Toolbar.php(500): CodeIgniter\Debug\Toolbar\Collectors\History->setFiles('1669630505.171562', 20)
+ 4 SYSTEMPATH\Debug\Toolbar.php(477): CodeIgniter\Debug\Toolbar->format([...], 'html')
+ 5 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 6 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 7 SYSTEMPATH\CodeIgniter.php(328): CodeIgniter\Events\Events::trigger('pre_system')
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 04:43:42 --> syntax error, unexpected double-quoted string "<hr>", expecting "," or ";"
+in APPPATH\Controllers\Admin\Order.php on line 20.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('admin/order')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('admin/order')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('admin/order')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 05:37:07 --> Call to undefined method CodeIgniter\View\View::extends()
+in APPPATH\Views\order\select.php on line 1.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 4 APPPATH\Controllers\Admin\Order.php(18): view('order/select')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 05:38:23 --> Call to undefined method CodeIgniter\View\View::extends()
+in APPPATH\Views\order\select.php on line 1.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 4 APPPATH\Controllers\Admin\Order.php(18): view('order/select')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 05:39:15 --> Undefined variable $judul
+in APPPATH\Views\order\select.php on line 23.
+ 1 APPPATH\Views\order\select.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $judul', 'APPPATH\\Views\\order\\select.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(18): view('order/select')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 05:39:36 --> Call to undefined method CodeIgniter\View\View::extends()
+in APPPATH\Views\order\select.php on line 1.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 4 APPPATH\Controllers\Admin\Order.php(18): view('order/select')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 05:41:02 --> Call to undefined method CodeIgniter\View\View::extends()
+in APPPATH\Views\order\select.php on line 1.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 4 APPPATH\Controllers\Admin\Order.php(18): view('order/select')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 06:17:20 --> Undefined variable $no
+in APPPATH\Views\order\select.php on line 20.
+ 1 APPPATH\Views\order\select.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'APPPATH\\Views\\order\\select.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(22): view('order/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 06:21:17 --> syntax error, unexpected token "}"
+in APPPATH\Views\order\select.php on line 33.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/select', [], true)
+ 3 APPPATH\Controllers\Admin\Order.php(22): view('order/select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 19:48:29 --> Array to string conversion
+in APPPATH\Views\order\update.php on line 13.
+ 1 APPPATH\Views\order\update.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\order\\update.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\order\\update.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('order/update', [], true)
+ 5 APPPATH\Controllers\Admin\Order.php(74): view('order/update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Order->find('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Order))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-28 22:26:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2022-11-30' at line 1 in D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM v...', 0)
+#1 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 D:\Xampp\htdocs\restoran-ci4\ci4\app\Controllers\Admin\OrderDetail.php(35): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(927): App\Controllers\Admin\OrderDetail->cari()
+#5 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\OrderDetail))
+#6 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Xampp\htdocs\restoran-ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-11-28 22:26:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''2022-11-30' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM vorderdetail WHERE tglorder BETWEEN \'2022-11-01\' AND \'2022-11-30', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM vorderdetail WHERE tglorder BETWEEN \'2022-11-01\' AND \'2022-11-30')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM vorderdetail WHERE tglorder BETWEEN \'2022-11-01\' AND \'2022-11-30')
+ 4 APPPATH\Controllers\Admin\OrderDetail.php(35): CodeIgniter\Database\BaseConnection->query('SELECT * FROM vorderdetail WHERE tglorder BETWEEN \'2022-11-01\' AND \'2022-11-30')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\OrderDetail->cari()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\OrderDetail))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 22:51:54 --> Invalid file: user/select.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/select.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/select', [], true)
+ 3 APPPATH\Controllers\Admin\User.php(22): view('user/select', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 22:54:55 --> Undefined variable $kategori
+in APPPATH\Views\user\select.php on line 40.
+ 1 APPPATH\Views\user\select.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\user\\select.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/select', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(22): view('user/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 22:55:23 --> Undefined array key "keterangan"
+in APPPATH\Views\user\select.php on line 44.
+ 1 APPPATH\Views\user\select.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "keterangan"', 'APPPATH\\Views\\user\\select.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/select', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(22): view('user/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 22:57:10 --> Undefined array key "status"
+in APPPATH\Views\user\select.php on line 48.
+ 1 APPPATH\Views\user\select.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'APPPATH\\Views\\user\\select.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\select.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/select', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(22): view('user/select', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 23:32:06 --> Undefined variable $kategori
+in APPPATH\Views\user\insert.php on line 39.
+ 1 APPPATH\Views\user\insert.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\user\\insert.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\insert.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/insert', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(31): view('user/insert', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 23:32:22 --> Undefined variable $user
+in APPPATH\Views\user\insert.php on line 39.
+ 1 APPPATH\Views\user\insert.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'APPPATH\\Views\\user\\insert.php', 39)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\insert.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/insert', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(31): view('user/insert', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 23:32:40 --> Cannot access offset of type string on string
+in APPPATH\Views\user\insert.php on line 40.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/insert', [], true)
+ 4 APPPATH\Controllers\Admin\User.php(31): view('user/insert', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->create()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 23:32:54 --> Undefined variable $value
+in APPPATH\Views\user\insert.php on line 40.
+ 1 APPPATH\Views\user\insert.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\user\\insert.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\insert.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/insert', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(31): view('user/insert', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-28 23:34:36 --> Undefined variable $value
+in APPPATH\Views\user\insert.php on line 40.
+ 1 APPPATH\Views\user\insert.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'APPPATH\\Views\\user\\insert.php', 40)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user\\insert.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user/insert', [], true)
+ 5 APPPATH\Controllers\Admin\User.php(31): view('user/insert', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\User->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

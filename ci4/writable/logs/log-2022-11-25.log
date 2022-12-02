@@ -1,0 +1,109 @@
+CRITICAL - 2022-11-25 04:01:55 --> syntax error, unexpected identifier "to", expecting ";"
+in APPPATH\Controllers\Admin\Menu.php on line 86.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('admin/menu')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('admin/menu')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('admin/menu')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 04:02:55 --> Undefined variable $POST
+in APPPATH\Controllers\Admin\Menu.php on line 84.
+ 1 APPPATH\Controllers\Admin\Menu.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $POST', 'APPPATH\\Controllers\\Admin\\Menu.php', 84)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-25 04:05:14 --> mysqli_sql_exception: Column 'harga' cannot be null in D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Xampp\htdocs\restoran-ci4\ci4\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Xampp\htdocs\restoran-ci4\ci4\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\Xampp\htdocs\restoran-ci4\ci4\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Xampp\htdocs\restoran-ci4\ci4\app\Controllers\Admin\Menu.php(85): CodeIgniter\Model->insert(Array)
+#8 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(927): App\Controllers\Admin\Menu->insert()
+#9 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+#10 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Xampp\htdocs\restoran-ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-25 04:05:14 --> Column 'harga' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (:idkategori:, :menu:, :gambar:, :harga:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Menu.php(85): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->insert()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-25 04:05:58 --> mysqli_sql_exception: Column 'harga' cannot be null in D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 D:\Xampp\htdocs\restoran-ci4\ci4\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 D:\Xampp\htdocs\restoran-ci4\ci4\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\Xampp\htdocs\restoran-ci4\ci4\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\Xampp\htdocs\restoran-ci4\ci4\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\Xampp\htdocs\restoran-ci4\ci4\app\Controllers\Admin\Menu.php(85): CodeIgniter\Model->insert(Array)
+#8 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(927): App\Controllers\Admin\Menu->insert()
+#9 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+#10 D:\Xampp\htdocs\restoran-ci4\ci4\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Xampp\htdocs\restoran-ci4\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-11-25 04:05:58 --> Column 'harga' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (\'35\', \'Burger\', \'bakso.jpeg\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tblmenu` (`idkategori`, `menu`, `gambar`, `harga`) VALUES (:idkategori:, :menu:, :gambar:, :harga:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Menu.php(85): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->insert()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 04:45:14 --> Undefined variable $kategori
+in APPPATH\Views\menu\update.php on line 24.
+ 1 APPPATH\Views\menu\update.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kategori', 'APPPATH\\Views\\menu\\update.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\menu\\update.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('menu/update', [], true)
+ 5 APPPATH\Controllers\Admin\Menu.php(110): view('menu/update', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->find('10')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 06:35:09 --> Undefined variable $request
+in APPPATH\Controllers\Admin\Menu.php on line 117.
+ 1 APPPATH\Controllers\Admin\Menu.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $request', 'APPPATH\\Controllers\\Admin\\Menu.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 07:02:29 --> syntax error, unexpected token "if"
+in APPPATH\Views\menu\update.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('menu/update', [], true)
+ 3 APPPATH\Controllers\Admin\Menu.php(112): view('menu/update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->find('26')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-25 07:02:34 --> syntax error, unexpected token "if"
+in APPPATH\Views\menu\update.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('menu/update', [], true)
+ 3 APPPATH\Controllers\Admin\Menu.php(112): view('menu/update', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Admin\Menu->find('26')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
